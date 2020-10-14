@@ -1,0 +1,111 @@
+//------------------------------------Funcionalidades, variables y mixins------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+$font1: 'Roboto', sans-serif;
+$base-size: calc(6px + 1vw);
+$primary-color: #2574A9;
+$secondary-color: #F9690E;
+$base-color: rgba(0,0,0,.5);
+$active-color: rgba(0,0,0,.9);
+
+
+// -------------------------------------------------Default-------------------------------------------------
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: $base-size;
+    font-family: $font1;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+// --------------------------------------------------Header--------------------------------------------------
+.header {
+    height: 60px;
+    width: 100%;
+    padding: 0 10%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    -webkit-box-shadow: 0px 3px 20px -1px rgba(196,192,192,1);
+    -moz-box-shadow: 0px 3px 20px -1px rgba(196,192,192,1);
+    box-shadow: 0px 3px 20px -1px rgba(196,192,192,1);
+    .img-container {
+        width: 10%;
+        height: 100%;
+        position: relative;
+        img {
+            width: 100%;
+            position: absolute;
+            top: 15%;
+        }
+    }
+
+    .navegation {
+        height: 100%;
+        width: 65%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        .nav-list {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .nav-items {
+                font-size: 1rem;
+                .nav-link {
+                    color: $base-color;
+                    transition: .3s ease;
+                }
+                .nav-link.active-link {
+                    color: $active-color;
+                }
+                .nav-link:hover {
+                    color: $active-color;
+                }
+            }
+        }
+        
+        .hamburger {
+            display: none;
+            width: 30px;
+            position: absolute;
+            cursor: pointer;
+            right: 50px;
+            .line {
+                width: 30px;
+                height: 3px;
+                margin: 5px 0;
+                background-color:$primary-color;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 0;
+        .img-container {
+            margin-left: 50px;
+        }
+        .navegation {
+            justify-content: flex-end;
+            .nav-list {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
+    }
+}
