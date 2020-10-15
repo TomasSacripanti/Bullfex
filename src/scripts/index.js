@@ -1,6 +1,9 @@
 //Imports
 import "../styles/styles.scss";
+import addImage from "./Images";
+import displayNav from "./Hamburger";
 import bullfexlogo from "../resources/images/logotipo-bullfex.svg";
+
 
 //Variables
 const hamburger = document.querySelector('.hamburger');
@@ -14,21 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     addImage(logoContainer, bullfexlogo, 'Logotipo Bullfex');
 });
 
-hamburger.addEventListener('click', displayNav);
-
-
-//Funciones
-
-function addImage(cont, img, msg) {
-    let imagen = document.createElement('img');
-    imagen.src = img;
-    imagen.alt = msg;
-    cont.appendChild(imagen);
-}
-
-function displayNav() {
-    navList.classList.toggle('open');
-    items.forEach(item => {
-        item.classList.toggle('fade');
-    })
-}
+hamburger.addEventListener('click', () => {
+    displayNav(navList, items);
+});
