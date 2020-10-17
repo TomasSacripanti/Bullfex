@@ -330,3 +330,64 @@ a {
     }
 }
 
+@media screen and (max-width:768px) {
+    .main {
+        .slider {
+            .slides {
+                .slide {
+                    .slide-container-v1 {
+                        @include slide-container(center, black);
+                    }
+                    .slide-container-v2 {
+                        @include slide-container(center, white);
+                    }
+                    .slide-container-v3 {
+                        @include slide-container(center, white);
+                    }
+                    .slide-container {
+                        .slide-content {
+                            width: 80%;
+                            h1 {
+                                font-size: 2rem;
+                            }
+                            p, a {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:450px) {
+    .main {
+        .slider {
+            .slides {
+                .slide {
+                    .slide-container-v1 {
+                        @include slide-container(center, black);
+                    }
+                    .slide-container-v2 {
+                        @include slide-container(center, white);
+                    }
+                    .slide-container-v3 {
+                        @include slide-container(center, white);
+                    }
+                    .slide-container {
+                        .slide-content {
+                            width: 100%;
+                            h1 {
+                                font-size: 2.2rem;
+                            }
+                            p, a {
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
