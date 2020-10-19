@@ -6,7 +6,7 @@ import slider from "./Slider.js"
 import bullfexlogo from "../resources/images/logotipo-bullfex.svg";
 
 
-//Variables
+//Variables y constantes
 const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list');
 const items = document.querySelectorAll('.nav-item');
