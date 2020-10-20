@@ -5,10 +5,11 @@ function slider() {
     let arrowRight = document.querySelector('.right-arrow');
     let arrowLeft = document.querySelector('.left-arrow');
     let current = 0;
+    
 
-    setTimeout(() => {
+    setInterval(() => {
         showNext();
-    },10000)
+    }, 10000);
 
 
     //Event Listeners

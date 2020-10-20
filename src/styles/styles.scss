@@ -317,6 +317,16 @@ a {
                 .item-container {
                     height: auto;
                     display: initial;
+                    .nav-link {
+                        i {
+                            display: none;
+                        }
+                    }
+                }
+                .item-container:hover {
+                    .sub-list {
+                        display: none;
+                    }
                 }
             }
             .nav-list.open {
@@ -556,3 +566,30 @@ a {
 }
 
 // ------------------------------------------------Contact------------------------------------------------
+
+.contact {
+    width: 100%;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            text-align: center;
+        }
+        h4 {
+            text-align: center;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
