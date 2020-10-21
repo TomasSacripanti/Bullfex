@@ -16,7 +16,9 @@ const items = document.querySelectorAll('.nav-item');
 //Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
     let  logoContainer = document.querySelector('.img-container');
+    let footerImgContainer = document.querySelector('.img-footer-container');
     addImage(logoContainer, bullfexlogo, 'Logotipo Bullfex');
+    addImage(footerImgContainer, bullfexlogo, 'Logotipo Bullfex');
     slider();
 });
 
