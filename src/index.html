@@ -128,29 +128,36 @@
             <h4>Contactános así podremos mostrarte nuestra propuesta de valor a detalle.</h4>
         </div>
         <div class="contact-form">
-            <form action="" class="form">
+            <form for="" class="form">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="name">Nombre:</label>
-                        <input type="text" id="name">
+                        <label for="name">Nombre</label>
+                        <input name="name" class="form-control" type="text"></input>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Número de Teléfono:</label>
-                        <input type="text" id="phone">
+                        <label for="email">Email</label>
+                        <input name="email" class="form-control" type="email"></input>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="description">Describí tu proyecto</label>
-                        <textarea name="description" id="description" cols="30" rows="10" placeholder="Podés agregar sitios web de referencia, tus redes sociales y cualquier característica que desees..."></textarea>
+                        <label for="phone" type="number">Número de teléfono</label>
+                        <input name="phone" class="form-control"></input>
                     </div>
-                    <input type="submit" value="Enviar">
+                    <div class="form-group">
+                        <label for="website">Web actual (opcional)</label>
+                        <input name="website" class="form-control"></input>
+                    </div>
                 </div>
-                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="project">Describí tu proyecto (opcional)</label>
+                        <textarea name="project" class="form-control" row="10" placeholder="Podés agregar sitios web de referencia, tus redes sociales y cualquier característica que desees..."></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <input type="submit">
+                </div>
             </form>
         </div>
     </section>

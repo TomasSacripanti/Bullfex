@@ -10,7 +10,7 @@ $base-color: rgba(0,0,0,.5);
 $active-color: rgba(0,0,0,.9);
 
 @mixin button {
-    a {
+    a, input[type=submit] {
         background-color: $primary-color;
         color: white;
         padding: 5px 20px;
@@ -18,8 +18,9 @@ $active-color: rgba(0,0,0,.9);
         border-radius: 3px;
         font-size: .8rem;
         transition: all 300ms;
+        cursor: pointer;
     }
-    a:hover {
+    a:hover, input[type=submit]:hover {
         transform: translateY(-3px);
         opacity: .9;
     }
@@ -486,7 +487,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 30px 0;
+    margin: 3rem 0;
     .services-title {
         width: 100%;
         display: flex;
@@ -569,27 +570,79 @@ a {
 
 .contact {
     width: 100%;
-    padding: 0 10%;
+    padding: 6% 10%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    div {
-        width: 50%;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    margin: 3rem 0;
+    .contact-header, .contact-form {
+        width: 48%;
         height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         h2 {
             text-align: center;
+            margin-bottom: 20px;
         }
         h4 {
             text-align: center;
         }
         .form {
+            min-height: 380px;
+            width: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: .4rem;
+            padding: 1.2rem;
+            .form-row {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                @include button;
+                .form-group {
+                    width: 45%;
+                    display: flex;
+                    flex-direction: column;
+                    label {
+                        font-size: .8rem;
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
+                    input {
+                        height: 35px;
+                        padding: 1px 5px;
+                        outline: none;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                    }
+                    input:focus, textarea:focus {
+                        color: #495057;
+                        background-color: #fff;
+                        border-color: #80bdff;
+                        outline: 0;
+                        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+                    }
+                    textarea {
+                        height: 60px;
+                        padding: 1px 5px;
+                        outline: none;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                    }
+                }
+            }
+            .form-row:nth-child(3) {
+                .form-group {
+                    width: 90%;
+                }
+            }
         }
     }
 }
