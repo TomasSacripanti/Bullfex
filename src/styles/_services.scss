@@ -1,0 +1,95 @@
+.services {
+    width: 100%;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+    .services-title {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        h2 {
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+    }
+    .services-cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 50px;
+        .service-card:nth-child(1) {
+            @include card('../resources/images/card1.jpg');
+        }
+        .service-card:nth-child(2) {
+            @include card('../resources/images/card2.jpg');
+        }
+        .service-card:nth-child(3) {
+            @include card('../resources/images/card3.jpg');
+        }
+        .service-card:hover {
+            .card-image {
+                .card-image-content {
+                    transform: scale(1.1);
+                }
+            }
+        } 
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .services {
+        padding: 0 5%;
+        .services-title {
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+        .services-cards {
+            grid-column-gap: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services {
+        .services-title {
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+        .services-cards {
+            .service-card {
+                .card-image {
+                    height: 80px;
+                }
+                .card-body {
+                    p {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .services {
+        padding: 0 15%;
+        .services-title {
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+        .services-cards {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-row-gap: 50px;
+        }
+    }
+}
